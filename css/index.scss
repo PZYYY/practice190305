@@ -1,35 +1,55 @@
-.p_box {
+.index_wrap {
   width: 100%;
-  p {
-    margin: 0;
-  }
   .banner {
+      position: relative;
       max-width: 100%;
       height: 560px;
-      padding: 40px 165px 0 165px;
-      background: url('../imgs/Banner.png') no-repeat;
-      background-size: contain;
       color: #fff;
+      .slide-imgs {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
       ul {
-        padding: 0;
+        position: absolute;
+        // left: 165px;
+        top: 40px;
+        // right: 165px;
+        padding: 40px 165px 0 165px;
+        box-sizing: border-box;
         display: flex;
         justify-content: flex-end;
         width: 100%;
         height: 28px;
         background: url('../imgs/business-name.png') no-repeat;
+        // background-position: 165px 40px;
         background-size: 190px 28px;
         font-size: 14px;
         list-style:none;
-        margin-bottom: 177px;
         li {
           margin-left: 43px;
+          a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+              color: darkcyan;
+            }
+          }
         }
       }
       .silde-text-box {
+        width: 100%;
+        position: absolute;
+        top: 217px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 96px;
+        padding: 0 165px;
+        box-sizing: border-box;
         span {
           display: inline-block;
           width: 44px;
@@ -40,6 +60,7 @@
           border-radius: 50%;
           color: #ffc155;
           font-size: 24px;
+          cursor: pointer;
         }
         .center {
           text-align: center;
@@ -53,6 +74,9 @@
         }
       }
       .bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -66,19 +90,31 @@
           background: #709dca;
         }
         .dots {
+          width: 120px;
           height: 26px;
           display: flex;
+          justify-content: space-between;
           align-items: center;
           span {
+            position: relative;
             width: 26px;
             height: 26px;
             line-height: 18px;
             text-align: center;
             font-size: 65px;
-            &.dot {
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            &::after {
               display: inline-block;
+              content: ' ';
+              width: 9px;
+              height: 9px;
+              background: #fff;
               border-radius: 50%;
-              border: 1px solid #fff;
+              position: absolute;
+              left: 9px;
+              top: 9px;
             }
           }
         }
