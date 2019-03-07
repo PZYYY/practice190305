@@ -10,4 +10,4 @@ html
 css
 1.优化css，尽量少的css做尽量的事。
 2.引入reset。https://github.com/necolas/normalize.css
-
+3.css命名规范： https://blog.csdn.net/u012182639/article/details/76063580
