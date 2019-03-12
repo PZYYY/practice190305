@@ -26,3 +26,5 @@ function next () {
   imgNode.setAttribute('src', bannerList[current])
   Array.from(dotObj)[current].classList.add('border')
 }
+
+
