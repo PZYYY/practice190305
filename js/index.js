@@ -4,7 +4,7 @@
   //   document.getElementsByClassName('slide-imgs')[0].appendChild(imgNode)
   // }
 
-let bannerList = ['../upload/banner0.png', '../upload/banner1.jpg', '../upload/banner2.jpg']
+let bannerList = ['upload/banner0.png', 'upload/banner1.jpg', 'upload/banner2.jpg']
 let current = 0
 let imgNode = document.getElementsByClassName('slide-imgs')[0].firstElementChild
 let dotObj = document.getElementsByClassName('dots')[0].children
