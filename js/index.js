@@ -10,6 +10,7 @@ let imgNode = document.getElementsByClassName('slide-imgs')[0].firstElementChild
 let dotObj = document.getElementsByClassName('dots')[0].children
 // 上一张
 function last () {
+  Array.from(dotObj)[current].classList.remove('border')
   current--
   if (current < 0) {
     current = bannerList.length - 1
@@ -19,6 +20,7 @@ function last () {
 }
 // 下一张
 function next () {
+  Array.from(dotObj)[current].classList.remove('border')
   current++
   if (current > bannerList.length - 1) {
     current = 0
