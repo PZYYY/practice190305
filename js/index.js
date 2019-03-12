@@ -16,6 +16,12 @@ function last () {
     current = bannerList.length - 1
   }
   imgNode.setAttribute('src', bannerList[current])
+  imgNode.style.zIndex = 100
+  imgNode.setAttribute('class', '')
+
+  // setTimeout(() => {
+    imgNode.setAttribute('class', 'slide-img')
+  // }, 500)
   Array.from(dotObj)[current].classList.add('border')
 }
 // 下一张

@@ -1,113 +1,118 @@
 .index_wrap {
   width: 100%; }
-  .index_wrap .banner {
+
+.banner {
+  position: relative;
+  max-width: 100%;
+  height: 560px;
+  color: #fff; }
+  .banner .slide-imgs {
     position: relative;
-    max-width: 100%;
-    height: 560px;
-    color: #fff; }
-    .index_wrap .banner .slide-imgs {
-      position: relative;
+    width: 100%;
+    height: 100%; }
+    .banner .slide-imgs img {
       width: 100%;
-      height: 100%; }
-      .index_wrap .banner .slide-imgs img {
-        width: 100%;
-        height: 100%; }
-      .index_wrap .banner .slide-imgs .center {
-        width: 100%;
-        position: absolute;
-        top: 217px;
-        text-align: center; }
-        .index_wrap .banner .slide-imgs .center p:nth-child(1) {
-          font-size: 30px;
-          font-weight: bold; }
-        .index_wrap .banner .slide-imgs .center p:nth-child(2) {
-          font-size: 20px; }
-    .index_wrap .banner .menu {
+      height: 100%;
+      opacity: 0;
+      transition: opacity .5s; }
+      .banner .slide-imgs img.slide-img {
+        opacity: 1; }
+    .banner .slide-imgs .center {
       width: 100%;
+      position: absolute;
+      top: 217px;
+      text-align: center; }
+      .banner .slide-imgs .center p:nth-child(1) {
+        font-size: 30px;
+        font-weight: bold; }
+      .banner .slide-imgs .center p:nth-child(2) {
+        font-size: 20px; }
+  .banner .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40px;
+    padding: 0px 165px;
+    box-sizing: border-box; }
+    .banner .menu img {
+      width: 190px;
+      height: 28px; }
+    .banner .menu ul {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 28px;
+      font-size: 14px;
+      list-style: none; }
+      .banner .menu ul li {
+        margin-left: 43px; }
+        .banner .menu ul li a {
+          color: #fff;
+          text-decoration: none; }
+          .banner .menu ul li a:hover {
+            color: darkcyan; }
+  .banner .silde-text-box {
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 96px;
+    padding: 0 150px;
+    box-sizing: border-box; }
+    .banner .silde-text-box span {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 40px;
+      border: 2px solid #709dca;
+      border-radius: 50%;
+      color: #ffc155;
+      font-size: 24px;
+      cursor: pointer; }
+  .banner .bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .banner .bottom .btn {
+      padding: 17px 23px;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-bottom: 36px;
+      background: #709dca; }
+    .banner .bottom .dots {
+      width: 100px;
+      height: 26px;
       display: flex;
       justify-content: space-between;
-      position: absolute;
-      top: 40px;
-      padding: 0px 165px;
-      box-sizing: border-box; }
-      .index_wrap .banner .menu img {
-        width: 190px;
-        height: 28px; }
-      .index_wrap .banner .menu ul {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        height: 28px;
-        font-size: 14px;
-        list-style: none; }
-        .index_wrap .banner .menu ul li {
-          margin-left: 43px; }
-          .index_wrap .banner .menu ul li a {
-            color: #fff;
-            text-decoration: none; }
-            .index_wrap .banner .menu ul li a:hover {
-              color: darkcyan; }
-    .index_wrap .banner .silde-text-box {
-      width: 100%;
-      position: absolute;
-      top: 300px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 96px;
-      padding: 0 150px;
-      box-sizing: border-box; }
-      .index_wrap .banner .silde-text-box span {
-        display: inline-block;
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        line-height: 40px;
-        border: 2px solid #709dca;
-        border-radius: 50%;
-        color: #ffc155;
-        font-size: 24px;
-        cursor: pointer; }
-    .index_wrap .banner .bottom {
-      width: 100%;
-      position: absolute;
-      bottom: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center; }
-      .index_wrap .banner .bottom .btn {
-        padding: 17px 23px;
-        font-size: 17px;
-        font-weight: bold;
-        border-radius: 5px;
-        margin-bottom: 36px;
-        background: #709dca; }
-      .index_wrap .banner .bottom .dots {
-        width: 100px;
+      .banner .bottom .dots span {
+        position: relative;
+        width: 26px;
         height: 26px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .index_wrap .banner .bottom .dots span {
-          position: relative;
-          width: 26px;
-          height: 26px;
-          line-height: 18px;
-          text-align: center;
-          font-size: 65px;
+        line-height: 18px;
+        text-align: center;
+        font-size: 65px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid transparent; }
+        .banner .bottom .dots span::after {
           display: inline-block;
+          content: ' ';
+          width: 9px;
+          height: 9px;
+          background: #fff;
           border-radius: 50%;
-          border: 1px solid transparent; }
-          .index_wrap .banner .bottom .dots span::after {
-            display: inline-block;
-            content: ' ';
-            width: 9px;
-            height: 9px;
-            background: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 9px;
-            top: 9px; }
-          .index_wrap .banner .bottom .dots span.border {
-            border-color: #fff; }
+          position: absolute;
+          left: 9px;
+          top: 9px; }
+        .banner .bottom .dots span.border {
+          border-color: #fff; }
