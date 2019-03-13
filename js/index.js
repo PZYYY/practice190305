@@ -13,19 +13,25 @@ let bannerText = [{
 
 for (let i = 0; i < bannerList.length; i++) {
     let imgNode = document.createElement('img')
+    let eachTextBox = document.createElement('div')
+    eachTextBox.setAttribute('class', 'text-box')
     imgNode.setAttribute('src', bannerList[i])
     imgNode.setAttribute('class', 'banner-img')
     document.getElementsByClassName('slide-imgs')[0].appendChild(imgNode)
+    bannerTextBox.appendChild(eachTextBox)
     for(let j = 0; j < 2; j++) {
       let textNode = document.createElement('p')
       textNode.innerHTML =  bannerText[i]['text'+j]
-      console.log(textNode)
-      bannerTextBox.appendChild(textNode)
+      eachTextBox.appendChild(textNode)
     }
   }
   let currentBanner = document.getElementsByClassName('banner-img')
+  let currentTextBox = document.getElementsByClassName('text-box')
   currentBanner[0].style.opacity = 1
   Array.from(currentBanner).splice(1).forEach((item, index) => {
+    item.style.display = 'none'
+  })
+  Array.from(currentTextBox).splice(1).forEach((item, index) => {
     item.style.display = 'none'
   })
 
@@ -35,6 +41,7 @@ let dotObj = document.getElementsByClassName('dots')[0].children
 function last () {
   Array.from(dotObj)[current].classList.remove('border')
   currentBanner[current].style.display = 'none'
+  currentTextBox[current].style.display = 'none'
   currentBanner[current].classList.remove('banner-img2')
   current--
   if (current < 0) {
@@ -43,12 +50,13 @@ function last () {
   Array.from(dotObj)[current].classList.add('border')
   currentBanner[current].classList.add('banner-img2')
   currentBanner[current].style.display = 'block'
-
+  currentTextBox[current].style.display = 'block'
 }
 // 下一张
 function next () {
   Array.from(dotObj)[current].classList.remove('border')
   currentBanner[current].style.display = 'none'
+  currentTextBox[current].style.display = 'none'
   currentBanner[current].classList.remove('banner-img2')
   current++
   if (current > bannerList.length - 1) {
@@ -57,6 +65,7 @@ function next () {
   Array.from(dotObj)[current].classList.add('border')
   currentBanner[current].classList.add('banner-img2')
   currentBanner[current].style.display = 'block'
+  currentTextBox[current].style.display = 'block'
 }
 
 
