@@ -18,7 +18,7 @@ for (let i = 0; i < bannerList.length; i++) {
     document.getElementsByClassName('slide-imgs')[0].appendChild(imgNode)
     for(let j = 0; j < 2; j++) {
       let textNode = document.createElement('p')
-      textNode.innerHTML =  bannerText[j].text0
+      textNode.innerHTML =  bannerText[i]['text'+j]
       console.log(textNode)
       bannerTextBox.appendChild(textNode)
     }
