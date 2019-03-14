@@ -22,6 +22,7 @@ for (let i = 0; i < bannerList.length; i++) {
     for(let j = 0; j < 2; j++) {
       let textNode = document.createElement('p')
       textNode.innerHTML =  bannerText[i]['text'+j]
+      textNode.style.marginBottom = '20px'
       eachTextBox.appendChild(textNode)
     }
   }
@@ -37,6 +38,10 @@ for (let i = 0; i < bannerList.length; i++) {
 
 let current = 0
 let dotObj = document.getElementsByClassName('dots')[0].children
+
+// 定时器轮播
+setInterval(this.next, 3000)
+
 // 上一张
 function last () {
   Array.from(dotObj)[current].classList.remove('border')

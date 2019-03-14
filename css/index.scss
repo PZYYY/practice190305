@@ -145,3 +145,61 @@
       }
     }
 }
+.content1 {
+  background: #fff;
+  padding: 83px 195px 0px 195px;
+  .title {
+    text-align: center;
+    margin-bottom: 85px;
+    p:nth-child(1) {
+      font-size: 26px;
+      color: #709dca;
+      margin-bottom: 10px;
+    }
+    p:nth-child(2) {
+      font-size: 16px;
+      color: #394b50;
+    }
+  }
+  .tips-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .tip {
+      width: 514px;
+      height: 92px;
+      padding-left: 56px;
+      margin-bottom: 80px;
+      box-sizing: border-box;
+      background-size: 32px 34px;
+      p:nth-child(1) {
+        font-size: 16px;
+        color: #394b50;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      p:nth-child(2) {
+        font-size: 13px;
+        color: #7b7b7b;
+      }
+      &.back-img:nth-child(1) {
+        background: url('../imgs/Tools.png') no-repeat;
+      }
+      &.back-img:nth-child(2) {
+        background: url('../imgs/Basket-loaded.png') no-repeat;
+      }
+      &.back-img:nth-child(3) {
+        background: url('../imgs/Layers.png') no-repeat;
+      }
+      &.back-img:nth-child(4) {
+        background: url('../imgs/Analytics.png') no-repeat;
+      }
+      &.back-img:nth-child(5) {
+        background: url('../imgs/Gauge.png') no-repeat;
+      }
+      &.back-img:nth-child(6) {
+        background: url('../imgs/Globe2.png') no-repeat;
+      }
+    }
+  }
+}
