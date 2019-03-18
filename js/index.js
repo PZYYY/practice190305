@@ -40,8 +40,24 @@ let current = 0
 let dotObj = document.getElementsByClassName('dots')[0].children
 
 // 定时器轮播
-setInterval(this.next, 3000)
+let bannerTimer = setInterval(this.next, 1000)
 
+// 鼠标移入移出
+// document.getElementsByClassName('banner')[0].onmouseenter = function () {
+//   clearInterval(bannerTimer)
+// }
+// document.getElementsByClassName('banner')[0].onmouseleave = function () {
+//   setInterval(this.next, 1000)
+// }
+
+
+
+// Array.from(document.getElementsByClassName('silde-text-box')[0].children)[0].onclick = () => {
+//   clearInterval(bannerTimer)
+// }
+// Array.from(document.getElementsByClassName('silde-text-box')[0].children)[1].onclick = () => {
+//   clearInterval(bannerTimer)
+// }
 // 上一张
 function last () {
   Array.from(dotObj)[current].classList.remove('border')
@@ -59,6 +75,7 @@ function last () {
 }
 // 下一张
 function next () {
+  console.log(58452)
   Array.from(dotObj)[current].classList.remove('border')
   currentBanner[current].style.display = 'none'
   currentTextBox[current].style.display = 'none'
