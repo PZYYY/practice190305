@@ -1,0 +1,8 @@
+{
+  "easysass.formats": [
+    {
+        "format": "nested",
+        "extension": ".css"
+    }
+  ],
+}

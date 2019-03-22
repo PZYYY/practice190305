@@ -213,12 +213,23 @@
     line-height: 0px;
     font-size: 26px;
     color: #709dca; }
-  .content3 img {
+  .content3 .icon-box {
     position: relative;
-    width: 20px;
+    text-align: center;
+    width: 224px;
     height: 20px;
     margin-bottom: 20px; }
-    .content3 img::after {
+    .content3 .icon-box img {
+      width: 20px;
+      background: #fff;
+      z-index: 1;
+      position: relative;
+      border-left: 10px solid #fff;
+      border-right: 10px solid #fff; }
+    .content3 .icon-box::after {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
       content: ' ';
       display: block;
       width: 224px;
@@ -240,18 +251,15 @@
 .content4 {
   display: flex;
   flex-wrap: wrap; }
-  @media screen and (min-width: 1920px) {
-    .content4 img {
-      width: 480px;
-      height: 359px; } }
   @media screen and (min-width: 960px) {
     .content4 img {
-      width: 283px;
-      height: 212px; } }
+      width: 50%; } }
   @media screen and (min-width: 1280px) {
     .content4 img {
-      width: 378px;
-      height: 283px; } }
+      width: 33.33%; } }
+  @media screen and (min-width: 1600px) {
+    .content4 img {
+      width: 25%; } }
 
 .content5 {
   padding: 100px 230px 40px; }
@@ -288,15 +296,16 @@
         background-size: 27px 30px; }
         .content5 .testimonial .each-box .user-name span {
           font-weight: bold; }
-  .content5 .dots {
+  .content5 ul {
     width: 66px;
     display: flex;
     justify-content: space-between; }
-    .content5 .dots li {
+    .content5 ul li {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #d4d3d4; }
-    .content5 .dots .active {
+      background: #d4d3d4;
+      padding: 0; }
+    .content5 ul .active {
       border: 2px solid #709dca;
       background: #fff; }
