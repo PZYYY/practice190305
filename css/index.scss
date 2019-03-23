@@ -285,6 +285,7 @@
     width: 560px;
     list-style:none;
     li {
+      cursor: pointer;
       padding: 5px 20px;
       box-sizing: border-box;
       &.back {
@@ -301,21 +302,16 @@
   @media screen and (min-width: 960px) {
     img {
       width: 50%;
-      // height: 212px;
     }
   }
   @media screen and (min-width: 1280px) {
     img {
       width: 33.33%;
-      // height: 283px;
     }
   }
   @media screen and (min-width: 1600px) {
     img {
-      // flex: 25%;
-      // display: block;
       width: 25%;
-      // height: 359px;
     }
   }
 }
@@ -374,6 +370,102 @@
     .active {
       border: 2px solid #709dca;
       background: #fff;
+    }
+  }
+}
+.content6 {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 165px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #c3c3c3;
+  background: #273a43;
+  .info {
+    width: 270px;
+    .name {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .info-text {
+      line-height: 25px;
+      span {
+        display: inline-block;
+        background: url('../imgs/icon-bird.png') no-repeat 5px 10px;
+        padding-left: 35px;
+      }
+      p {
+        padding-left: 35px;
+        color: #71b6d5;
+      }
+    }
+    .address-box {
+      span {
+        display: block;
+        color: #fff;
+        margin-top: 15px;
+        padding-left: 30px;
+        &.locat {
+          background: url('../imgs/icon-location.png') no-repeat 5px;
+          background-size: auto 100%;
+        }
+        &.mess {
+          background: url('../imgs/icon-message.png') no-repeat;
+        }
+        &.phone {
+          background: url('../imgs/icon-phone.png') no-repeat 3px;
+        }
+      }
+    }
+    .submit {
+      margin-top: 37px;
+      input {
+        color: #fff;
+        height: 34px;
+        background: #172227;
+        border: none;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding-left: 10px;
+      }
+      button {
+        background: #71b6d5;
+        border: none;
+        color: #fff;
+        padding: 10px 15px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-left: -4px;
+      }
+    }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  box-sizing: border-box;
+  background: #172227;
+  p {
+    color: #c4c4c4;
+    font-size: 14px;
+  }
+  .icon-box {
+    span {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      display: inline-block;
+      &:nth-child(1) {
+        background: url('../imgs/icon-bird-w.png') no-repeat #71b6d5 50% 50%;
+      }
+      &:nth-child(2), &:nth-child(3) {
+        color: #fff;
+        font-weight: bold;
+        background: #2c3b42;
+      }
     }
   }
 }
