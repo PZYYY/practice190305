@@ -53,11 +53,19 @@ let bannerTimer = setInterval(this.next, 1000)
 
 
 // Array.from(document.getElementsByClassName('silde-text-box')[0].children)[0].onclick = () => {
-//   clearInterval(bannerTimer)
 // }
 // Array.from(document.getElementsByClassName('silde-text-box')[0].children)[1].onclick = () => {
 //   clearInterval(bannerTimer)
 // }
+function onLast () {
+  clearInterval(bannerTimer)
+   setTimeout(() => {
+    bannerTimer = setInterval(last, 1000)
+    console.log(1111)
+  }, 5000)
+  last()
+}
+
 // 上一张
 function last () {
   Array.from(dotObj)[current].classList.remove('border')
@@ -75,7 +83,6 @@ function last () {
 }
 // 下一张
 function next () {
-  console.log(58452)
   Array.from(dotObj)[current].classList.remove('border')
   currentBanner[current].style.display = 'none'
   currentTextBox[current].style.display = 'none'
