@@ -264,7 +264,7 @@
       width: 20px;
       background: #fff;
       z-index: 1;
-      position: relative;
+      position: absolute;
       border-left: 10px solid #fff;
       border-right: 10px solid #fff;
     }
@@ -285,6 +285,7 @@
     width: 560px;
     list-style:none;
     li {
+      font-size: 0.15rem;
       cursor: pointer;
       padding: 5px 20px;
       box-sizing: border-box;
